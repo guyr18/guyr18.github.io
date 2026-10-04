@@ -177,3 +177,25 @@
 .trajectory span:hover,.trajectory span:focus-visible{background:var(--traj,#0a66c2);border-color:var(--traj,#0a66c2);color:#fff;box-shadow:0 7px 18px color-mix(in srgb,var(--traj,#0a66c2) 22%,transparent)}
 .gtri-lockup{display:flex;align-items:stretch;gap:13px;width:max-content;max-width:100%;margin-top:18px;padding:7px 0;color:#003057;user-select:none}.gtri-rule{display:block;width:5px;min-height:48px;border-radius:999px;background:#b3a369}.gtri-lockup>div{display:flex;flex-direction:column;justify-content:center;line-height:1.04}.gtri-lockup strong{font-family:Georgia,"Times New Roman",serif;font-size:21px;letter-spacing:-.025em}.gtri-lockup div span{margin-top:5px;font-size:13px;font-weight:800;letter-spacing:.055em;text-transform:uppercase;color:#54697b}
 @supports not (color:color-mix(in srgb, red, blue)){.grid > .card:hover{box-shadow:0 14px 32px rgba(23,50,77,.1)}.trajectory span{border-color:#c6d9e8}.trajectory span:hover{box-shadow:0 7px 18px rgba(23,50,77,.13)}}
+
+/* v9: personal hero portrait + explicit organization navigation */
+.hero{grid-template-columns:minmax(0,1fr) 205px 255px;gap:34px;align-items:center}
+.hero-copy{min-width:0}
+.hero-portrait{position:relative;z-index:2;align-self:center}
+.hero-portrait img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;border-radius:20px;border:1px solid #bfd8ea;box-shadow:0 18px 45px rgba(23,50,77,.14);background:#fff}
+.focus-card{align-self:center}
+.company-link{text-decoration:none!important;cursor:pointer}
+.company-link:hover{transform:translateY(-2px)}
+.str-official{gap:12px;height:auto;padding:0}
+.str-logo-plate{display:flex;align-items:center;justify-content:center;background:#102f49;border-radius:9px;padding:10px 14px;min-width:112px;min-height:48px;box-shadow:0 5px 14px rgba(23,50,77,.10)}
+.str-logo-plate img{width:96px!important;height:auto!important;max-width:none!important;object-fit:contain}
+.company-link-label{font-size:12px;font-weight:750;color:#526c80}
+.str-official:hover .company-link-label{color:var(--linkedin)}
+.gtri-lockup.company-link{transition:transform .18s ease,color .18s ease}
+.gtri-lockup.company-link:hover{color:#0a66c2}
+.school-link{text-decoration:none!important}
+.school-link:hover{transform:translateY(-2px);filter:brightness(1.05)}
+.school-kicker a{color:inherit;text-decoration:none}
+.school-kicker a:hover{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:980px){.hero{grid-template-columns:minmax(0,1fr) 190px}.focus-card{display:none}.hero-portrait{justify-self:end;width:190px}}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.hero-portrait{grid-row:1;justify-self:start;width:150px}.hero-copy{grid-row:2}.meta{grid-row:3}.hero-portrait img{border-radius:17px}.company-link-label{display:none}}
