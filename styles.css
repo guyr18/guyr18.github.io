@@ -108,3 +108,52 @@
 @supports not (color:color-mix(in srgb, red, blue)){
   .grid > .card:hover{border-color:#b7d5ea}
 }
+
+/* v7: explicit publication colors, readable education metadata, complete local PDF actions */
+.school-meta{
+  display:flex !important;
+  align-items:baseline !important;
+  flex-wrap:wrap !important;
+  gap:5px 8px !important;
+  line-height:1.5 !important;
+  color:var(--muted);
+  font-size:13px;
+}
+.school-meta span,.school-meta strong{
+  display:inline-block !important;
+  margin:0 !important;
+  padding:0 !important;
+  white-space:nowrap;
+}
+.school-meta span+span:before,.school-meta strong:before{content:none !important}
+.school-meta .meta-sep{color:#9aaab8;font-weight:700;margin:0 1px !important}
+.school-meta > strong{color:var(--navy);font-weight:800}
+
+/* Distinct but professional paper identities. */
+.pub{position:relative;padding-left:14px;transition:background .18s ease,transform .18s ease}
+.pub:before{content:"";position:absolute;left:0;top:18px;bottom:18px;width:4px;border-radius:999px;background:var(--pub-color,#0a66c2)}
+.pub-state{--pub-color:#e67e22;--pub-soft:#fff5e9;--pub-border:#efb574;--pub-dark:#a94f05}
+.pub-adaptation{--pub-color:#168a52;--pub-soft:#edf9f2;--pub-border:#8dceaa;--pub-dark:#0b6439}
+.pub-prediction{--pub-color:#6f42c1;--pub-soft:#f5f0ff;--pub-border:#b9a0e5;--pub-dark:#4d288f}
+.pub-protection{--pub-color:#0a66c2;--pub-soft:#edf6ff;--pub-border:#91bee7;--pub-dark:#004182}
+.pub:hover{background:var(--pub-soft)}
+.pub .pub-links a{
+  border-color:var(--pub-border) !important;
+  color:var(--pub-dark) !important;
+  background:#fff !important;
+}
+.pub .pub-links a.paper-local{
+  background:var(--pub-color) !important;
+  border-color:var(--pub-color) !important;
+  color:#fff !important;
+}
+.pub .pub-links a:hover{
+  background:var(--pub-soft) !important;
+  border-color:var(--pub-color) !important;
+  color:var(--pub-dark) !important;
+  box-shadow:0 4px 12px color-mix(in srgb,var(--pub-color) 18%,transparent);
+}
+.pub .pub-links a.paper-local:hover{filter:brightness(.92);color:#fff !important;background:var(--pub-color) !important}
+@supports not (color:color-mix(in srgb, red, blue)){
+  .pub .pub-links a:hover{box-shadow:0 4px 12px rgba(23,50,77,.12)}
+}
