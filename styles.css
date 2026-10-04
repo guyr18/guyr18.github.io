@@ -242,3 +242,12 @@
 .gtri-cta .button.ghost:hover { background:#fff; color:#0a66c2; }
 @media (max-width: 1040px) { .quick-contact { display:none; } .coverage-grid { grid-template-columns:1fr; } .coverage-card { min-height:0; } }
 @media (max-width: 760px) { .detail-grid,.award-grid { grid-template-columns:1fr; } .detail-hero { padding:56px 0 40px; } .gtri-cta { align-items:flex-start; flex-direction:column; } }
+
+/* v11 interaction and accessibility polish */
+.focus-flow span[tabindex]{cursor:help;transition:transform .16s ease,border-color .16s ease,background .16s ease,box-shadow .16s ease}
+.focus-flow span[tabindex]:hover,.focus-flow span[tabindex]:focus-visible{transform:translateX(2px);border-color:#8bbfe5;background:#fff;box-shadow:0 5px 14px rgba(25,76,112,.08);outline:none}
+.gtri-cta .button.primary{background:#fff;color:#07558f;border-color:#fff;box-shadow:none}
+.gtri-cta .button.primary:hover,.gtri-cta .button.primary:focus-visible{background:#eaf5ff;color:#064b7e;border-color:#eaf5ff}
+.gtri-cta .button.gtri-linkedin{background:#0a66c2;color:#fff;border:2px solid #fff;box-shadow:none}
+.gtri-cta .button.gtri-linkedin:hover,.gtri-cta .button.gtri-linkedin:focus-visible{background:#004182;color:#fff;border-color:#fff}
+.quick-contact a:focus-visible,.button:focus-visible,.trajectory span:focus-visible,.chips span:focus-visible{outline:3px solid rgba(10,102,194,.24);outline-offset:3px}
