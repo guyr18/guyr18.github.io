@@ -1,15 +1,27 @@
 # Robert Guy — Academic Research Website
 
-Source for `guyr18.github.io`.
+GitHub Pages site for `guyr18.github.io`.
 
-## Publish with GitHub Pages
+## Version 2 design
+- Blue-led academic/research identity
+- Lightweight pale-blue section hierarchy rather than stark black/white
+- Custom inline research diagrams (no external image dependencies)
+- Georgia Tech and ECU education cards with school-color monogram marks
+- Responsive desktop/mobile layout
+- Existing research, publications, experience, CV, and contact content preserved
 
-1. Create a **public** GitHub repository named exactly `guyr18.github.io`.
-2. Upload `index.html`, `styles.css`, and `Robert_Guy_CV.pdf` to the repository root.
-3. Commit the files to the default branch (`main`).
-4. In GitHub, open **Settings → Pages**. If needed, choose **Deploy from a branch**, select `main` and `/ (root)`, then save.
-5. The site should become available at `https://guyr18.github.io/` after GitHub finishes deploying it.
+## Publish/update
+From this directory:
 
-## Updating
+```bash
+git add .
+git commit -m "Refresh academic site design"
+git push
+```
 
-Edit `index.html` for content and `styles.css` for presentation. Replace `Robert_Guy_CV.pdf` with a newer PDF using the same filename to keep the CV link stable.
+GitHub Pages will redeploy from `main` automatically if the repository is already configured.
+
+## Files
+- `index.html` — site content and inline SVG research graphics
+- `styles.css` — complete responsive visual theme
+- `Robert_Guy_CV.pdf` — linked CV; keep this filename stable when replacing it
