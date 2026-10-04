@@ -25,3 +25,5 @@ GitHub Pages will redeploy from `main` automatically if the repository is alread
 - `index.html` — site content and inline SVG research graphics
 - `styles.css` — complete responsive visual theme
 - `Robert_Guy_CV.pdf` — linked CV; keep this filename stable when replacing it
+
+- Added a compact, expandable Relevant Graduate Coursework section under Georgia Tech with six curated graduate courses.
