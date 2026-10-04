@@ -61,3 +61,50 @@
 .school-meta span+span:before{content:"·";padding:0 7px;color:#9aaab8;font-weight:700}
 .school-meta strong{color:var(--navy)}
 @media(max-width:760px){.company-logo img{max-width:280px;height:44px}.school-meta{row-gap:2px}}
+
+/* v6: deterministic card layout, education metadata spacing, project color identities */
+.grid > .card{
+  display:flex;
+  flex-direction:column;
+  min-height:300px;
+}
+.grid > .card > p{margin-bottom:18px}
+.grid > .card > .paper-links{margin-top:auto}
+.paper-links{
+  display:flex !important;
+  align-items:center !important;
+  gap:10px !important;
+  min-height:34px;
+}
+.paper-links a{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  margin:0 !important;
+}
+.school-meta{
+  display:flex;
+  align-items:baseline;
+  column-gap:9px;
+  row-gap:4px;
+  line-height:1.45;
+}
+.school-meta span{display:inline-flex;align-items:baseline;white-space:nowrap}
+.school-meta span+span:before{content:"·";padding-right:9px;color:#9aaab8;font-weight:700}
+.school-meta strong{margin-left:4px}
+.school-meta span > strong:only-child{margin-left:0}
+
+/* Each project gets a restrained accent while preserving the site's blue identity. */
+.project-state{--project:#268bd2;--project-soft:#eef8ff}
+.project-adaptation{--project:#0a66c2;--project-soft:#eef5ff}
+.project-prediction{--project:#5b6fc8;--project-soft:#f3f3ff}
+.project-protection{--project:#6b5aa6;--project-soft:#f6f2ff}
+.grid > .card:before{background:var(--project,#268bd2)}
+.grid > .card .num{color:var(--project,#0a66c2)}
+.grid > .card .research-icon svg{stroke:var(--project,#4e9bd2)}
+.grid > .card .research-icon svg circle,
+.grid > .card .research-icon svg rect{fill:var(--project-soft,#f4faff)}
+.grid > .card:hover{border-color:color-mix(in srgb,var(--project,#268bd2) 38%,#d8e6f1);box-shadow:0 12px 30px rgba(25,76,112,.09)}
+@supports not (color:color-mix(in srgb, red, blue)){
+  .grid > .card:hover{border-color:#b7d5ea}
+}

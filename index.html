@@ -7,7 +7,7 @@
 <meta content="Robert Guy — research in real-time and distributed systems, scheduling, learning-augmented systems, and tail-latency control." name="description"/>
 <meta content="#0b4f8a" name="theme-color"/>
 <title>Robert Guy | Real-Time &amp; Distributed Systems</title>
-<link href="styles.css?v=5" rel="stylesheet"/>
+<link href="styles.css?v=6" rel="stylesheet"/>
 </head>
 <body>
 <header class="site-header">
@@ -46,19 +46,19 @@
 <p class="section-intro">My recent work follows a progression from distributed state synchronization to adaptive scheduling, predictive scheduling, and runtime protection against high-risk decisions.</p>
 <div aria-label="Research trajectory" class="trajectory"><span tabindex="0" title="Robust distributed state synchronization">State</span><b>→</b><span tabindex="0" title="Runtime priorities respond to changing system conditions">Adaptation</span><b>→</b><span tabindex="0" title="Sequence models estimate future scheduling cost">Prediction</span><b>→</b><span tabindex="0" title="Runtime guards limit high-risk tail-latency failures">Protection</span></div>
 <div class="grid research-grid">
-<article class="card">
+<article class="card project-state">
 <div aria-hidden="true" class="research-icon"><svg viewbox="0 0 96 72"><circle cx="17" cy="19" r="8"></circle><circle cx="17" cy="53" r="8"></circle><rect height="22" rx="5" width="20" x="39" y="25"></rect><circle cx="80" cy="19" r="8"></circle><circle cx="80" cy="53" r="8"></circle><path d="M25 19h14M25 53h14M59 30l13-8M59 42l13 8"></path></svg></div>
 <div class="num">01 · STATE</div><h3>Distributed Scene Update</h3><p>Middleware for real-time partial state synchronization in distributed systems, centered on partial, declarative, versioned updates and deterministic state handling.</p><div class="paper-links"><a class="paper-local" href="papers/Distributed_Scene_Update.pdf">View PDF</a><a href="https://doi.org/10.5281/zenodo.19010080">DOI ↗</a></div>
 </article>
-<article class="card">
+<article class="card project-adaptation">
 <div aria-hidden="true" class="research-icon"><svg viewbox="0 0 96 72"><path d="M10 17h28M10 35h28M10 53h28"></path><circle cx="24" cy="17" r="5"></circle><circle cx="31" cy="35" r="5"></circle><circle cx="18" cy="53" r="5"></circle><path d="M42 17l22 18-22 18M64 35h22"></path></svg></div>
 <div class="num">02 · ADAPTATION</div><h3>Adaptive Priority Arbitration</h3><p>Runtime-aware arbitration for stateful distributed pipelines, using changing system conditions to adapt scheduling priorities rather than relying on fixed policies.</p><div class="paper-links"><a class="paper-local" href="papers/Adaptive_Priority_Arbitration.pdf">View PDF</a><a href="https://doi.org/10.5281/zenodo.19026183">DOI ↗</a></div>
 </article>
-<article class="card">
+<article class="card project-prediction">
 <div aria-hidden="true" class="research-icon"><svg viewbox="0 0 96 72"><path d="M8 52l15-17 14 8 14-25 15 11"></path><circle cx="23" cy="35" r="4"></circle><circle cx="37" cy="43" r="4"></circle><circle cx="51" cy="18" r="4"></circle><path d="M67 29h18M77 20l9 9-9 9"></path></svg></div>
 <div class="num">03 · PREDICTION</div><h3>Predictive Arbitration</h3><p>Learning-augmented scheduling using sequence models to estimate the future cost of candidate scheduling actions from recent system history.</p><div class="paper-links"><a class="paper-local" href="papers/Predictive_Arbitration.pdf">View PDF</a><a href="https://doi.org/10.5281/zenodo.19229146">DOI ↗</a></div>
 </article>
-<article class="card">
+<article class="card project-protection">
 <div aria-hidden="true" class="research-icon"><svg viewbox="0 0 96 72"><path d="M48 9l27 10v18c0 15-10 23-27 28-17-5-27-13-27-28V19z"></path><path d="M34 38l9 9 20-22"></path></svg></div>
 <div class="num">04 · PROTECTION</div><h3>Risk-Aware Guarded Scheduling</h3><p>Runtime guard mechanisms for protecting predictive schedulers from high-risk decisions and controlling extreme tail-latency behavior.</p><div class="paper-links"><a class="paper-local" href="papers/Risk_Aware_Guarded_Scheduling.pdf">View PDF</a><a href="https://doi.org/10.5281/zenodo.20030902">DOI ↗</a></div>
 </article>
